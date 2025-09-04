@@ -2,12 +2,18 @@
 title: "3D Printed Syringe Pump"
 excerpt: "DIY Syringe Pump capable of dispensing 1-10 uL/min of flow rate with adjustable interface"
 header:
-  image: /assets/img/pno-profile.web
-  teaser: /assets/img/
+  image: /assets/img/Syringe1.jpeg
+  teaser: /assets/img/Syringe1.jpeg
 gallery:
-  - image_path: 
-  - image_path: 
-  - image_path: 
+  - image_path: /assets/img/Syringe1.jpeg
+  - image_path: /assets/img/Syringe2.jpeg
+  - image_path: /assets/img/Syringe3.jpeg
+  - image_path: /assets/img/Syringe4.jpeg
+  - image_path: /assets/img/Syringe5.jpeg
+  - image_path: /assets/img/Syringe6.jpeg
+  - image_path: /assets/img/Syringe7.jpeg
+  - image_path: /assets/img/Syringe8.jpeg
+  - image_path:
    
 ---
 
