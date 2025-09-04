@@ -6,26 +6,30 @@ title: "About Cynthia Huang"
 
 ## Education
 
-David prides himself on his diverse skill set. His most prominent fields of expertise are additive manufacturing (i.e., 3D printing) and biotechnology. 
+Cynthia is fascinated by the field of biomedical and chemical engineering, hoping to look into opportunities to go to graduate school after graduating from Vanderbilt University.
 
-* University of Virginia
-  * BS Mathematics
-  * BS Biomedical Engineering
 * Vanderbilt University
-  * PhD Biomedical Engineering
+  * Biomedical and Chemical Engineering (Expected Graduation: May 2028
+ 
+## Work Experience
+
+Cynthia has work experience in the academic fields of research, startup, and employed through the university.
+
+* Research Assistant
+  * Duvall Advanced Therapeutics Lab
+    * Working on hybrid shear-thinning hydrogel applications for diabetic wound healing utilizing micelle formations using diblock polymers
+
+* Startup Intern
+  * LitSmart and ConsumeWell
+    * Finding angel investors, connecting with investors, managing company welfare, communications between ConsumeWell, and marketing/website
 
 ## Technical Skills
 
-David can operate a number of different computer controlled (CNC) fabrication tools to turn 3D models into real-life parts. David has experience with the following additive manufacturing technologies:
+Cynthia has experience with the following manufacturing skills:
 
 * Fused Filament Fabrication (FFF)
-* Stereolithography (SLA)
-* Selective Laser Sintering (SLS)
-* 3D Inkjet Printing
-* Bioplotting
+* Laser Cutting
+* Computer-Aided Designing (CAD)
+* Metal Cutting Lathe and Mill Operations
 
-## Press 
-
-The new Digital Fabrication Minor was covered in the [Vanderbilt Hustler](https://vanderbilthustler.com/2022/11/09/digital-fabrication-minor-introduced-for-2022-23-academic-year/).
-
-<img src="/assets/img/David_Headshot_web2.jpg" alt="David Florian" style="width:200px;"/>
+<img src="/assets/img/no-profile.webp" alt="Cynthia" style="width:200px;"/>
