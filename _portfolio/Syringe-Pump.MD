@@ -44,6 +44,6 @@ the syringe pump is empty
 <iframe src="https://vanderbilt643.autodesk360.com/shares/public/SH286ddQT78850c0d8a4257dd1c1c5818cd6?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
 # Arduino Code
-View Code Here: (https://www.github/com/CynthiaHng.github.io/assets/img/Syringe_Pump_Code_V6.ino)
+View Code Here: (https://www.github.com/CynthiaHng.github.io/assets/img/Syringe_Pump_Code_V6.ino)
 
 {% include gallery caption="DIY Syringe Pump" %}
