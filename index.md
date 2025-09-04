@@ -1,4 +1,4 @@
- ---
+---
 title: "Digital Fabrication Projects"
 layout: splash
 header:
