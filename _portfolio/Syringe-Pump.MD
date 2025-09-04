@@ -59,6 +59,7 @@ the syringe pump is empty
 | Panel mount momentary push buttons (x1)                                       |                             |
 | Limit switch (x1)                                                             |                             |
 | RGB common cathode LED (x3)                                                   |                             |
+| Knob button                                                                   |                             |
 
 
 # CAD Model
@@ -66,5 +67,9 @@ the syringe pump is empty
 
 # Arduino Code
 [View Code Here:](https://github.com/CynthiaHng/CynthiaHng.github.io/blob/main/assets/img/Syringe_Pump_Code_V6.ino)
+
+# How to Operate
+
+To operate this DIY Syringe Pump, turn on the pump by plugging it in and ensuring that the arduino has a power supply. Navigate the LED screen to change the flow rate (this can also be adjusted later during the process by turning the knob, this will adjust the flow rate via the LED screen). Start the machine by pushing the mounted push button, and the syringe pump will operate. The LED lights will indicate running, pausing, and completion as green, yellow, and red, respectively. Once the pump reaches the end of its cycle, it will automatically shut off due to the limit switch. The syringe pump will then be allowed to be reset. If during the process of pumping the pump needs to be reset, simply press the off button or turn off on the LED screen and readjust the syringe pump.
 
 {% include gallery caption="DIY Syringe Pump" %}
