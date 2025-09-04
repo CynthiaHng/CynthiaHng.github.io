@@ -1,6 +1,6 @@
 ---
 
-title: "About David Florian"
+title: "About Cynthia Huang"
 
 ---
 
