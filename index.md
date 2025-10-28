@@ -14,10 +14,10 @@ feature_row:
     alt: "Syringe Pump"
     title: "DIY Syringe Pump"
     excerpt: "3D Printed 1-10 uL/min Syringe Pump Project."
-  - image_path: assets/img/ 
-    alt: " "
-    title: " "
-    excerpt: " "
+  - image_path: assets/img/microfluidic_device_angled.jpg
+    alt: "Microfluidic Device"
+    title: "3D Printed Microfluidic Device"
+    excerpt: "3D CAD Pinch Flow Fractionation Particle Separation Microfluidic Device"
   - image_path: assets/img/ 
     title: " "
     excerpt: " "
