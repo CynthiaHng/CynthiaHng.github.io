@@ -48,9 +48,9 @@ The device was designed using a **symmetric three-outlet PFF geometry** optimize
 
 The outlets were positioned according to the theoretical separation location given by the streamline displacement equation:
 
-\[
-Y_0 = \frac{(w_p - D/2)w_b}{w_p}
-\]
+$$
+Y_0 = \frac{(w_p - D/2) \, w_b}{w_p}
+$$
 
 To prevent **unequal backpressure** between outlets, outlet channels for small- and large-particle flows were **extended and narrowed**, increasing their hydraulic resistance. The **buffer outlet** was designed shorter and wider to naturally carry higher volumetric flow.  
 
