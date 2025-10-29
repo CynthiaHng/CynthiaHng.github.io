@@ -88,9 +88,9 @@ This design can be scaled by adjusting the pinch width and outlet geometry to ac
 The smallest separable particle is limited by surface roughness, printer resolution, and channel height — typically around 50–80 µm for this specific device size.
 
 ### Future Improvements
-- Incorporate **asymmetric PFF (AsPFF)** geometry to enhance separation efficiency.  
-- Add **on-chip flow resistors or valves** to fine-tune outlet flow balance.  
-- Test with **biological cell analogs** to evaluate sorting fidelity.  
+- For future adjustments to improve turbulent flow and the experimental process, modifications could be made to the hydrodynamic balancing by increasing the outlet lengths and be held at an angle to allow for adjustments in all outlets to raise hydraulic resistance for equality and prevent siphon effect to occur early.
+- To target the turbulence that formed in the broad section, adjusting the expension ratio of wb/wp for a decrease would be beneficial to maintain laminar flow as it would not create a sudden area change from the pinch region and allow flow to be more gradual. Increasing the channel height might also be beneficial for smoother streamlines as it could lower shear stress.
+- It would also be beneficial to be purposeful with outlet channels and channel area before outlets to ensure flow is consistent. Calculations of channel area from broad region to outlet should be observed to preserve laminar flow and equal stream, as did the inlet channels. A look into a pinch-flow segment before entering an outlet channel may force streams to be more uniform and create the center broad region more forceful of size preferability.
 
 ---
 
