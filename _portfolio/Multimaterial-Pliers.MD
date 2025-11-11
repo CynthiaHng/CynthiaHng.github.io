@@ -2,11 +2,15 @@
 title: "Multimaterial Pliers"
 excerpt: "Flexible pliers 3D printed through FFA printing using TPU and PLA materials"
 header:
-  image: /assets/img/microfluidic_device_angled.jpg
-  teaser: /assets/img/microfluidic_device_angled.jpg
+  image: /assets/img/pliers_pinch.jpeg
+  teaser: /assets/img/pliers_pinch.jpeg
 gallery:
-  - image_path: /assets/img/microfluidic_device.jpg
-  - image_path: /assets/img/microfluidic_setup.jpg
+  - image_path: /assets/img/pliers_pinch.jpeg
+  - image_path: /assets/img/pliers_closeup.jpeg
+  - image_path: /assets/img/pliers_pile.jpeg
+  - image_path: /assets/img/pliers_side.jpeg
+  - image_path: /assets/img/pliers_split.jpeg
+  - image_path: /assets/img/pliers_vert.jpeg
    
 ---
 
