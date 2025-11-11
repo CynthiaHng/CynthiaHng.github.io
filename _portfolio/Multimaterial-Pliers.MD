@@ -5,7 +5,7 @@ header:
   image: /assets/img/pliers_pinch.jpeg
   teaser: /assets/img/pliers_pinch.jpeg
 gallery:
-  - image_path: /assets/img/pliers_pinch.jpeg
+  - image_path: /assets/img/pliers_pinch2.jpeg
   - image_path: /assets/img/pliers_closeup.jpeg
   - image_path: /assets/img/pliers_pile.jpeg
   - image_path: /assets/img/pliers_side.jpeg
