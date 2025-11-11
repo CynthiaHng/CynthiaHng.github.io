@@ -1,6 +1,6 @@
 ---
 title: "Multimaterial Pliers"
-excerpt: "Flexible pliers 3D printed through FFA printing using TPU and PLA materials"
+excerpt: "Flexible pliers 3D printed through FFF printing using TPU and PLA materials"
 header:
   image: /assets/img/pliers_pinch.jpeg
   teaser: /assets/img/pliers_pinch.jpeg
@@ -14,7 +14,7 @@ gallery:
    
 ---
 
-# Multimaterial FFA 3D Printed Pliers
+# Multimaterial FFF 3D Printed Pliers
 
 ---
 
@@ -29,6 +29,12 @@ gallery:
 - An aspect ratio of 4:1 or less was respected to prevent taller features from breaking off during the demolding process
 - Outlet channels were created to help balance hydraulic resistance within the device to optimize equalized flow for the particle streams
 - Space within the device was optimized and made intentional to avoid bubble formation streamline disruption
+
+- Designed on Autodesk Fusion 360 for both flexible joint and rigid structures, generated to promote capabilities in open and closed flexible states of pliers
+- Fused-Filament Fabrication (FFF) printing was utilized with Thermoplastic Polyurethane (TPU) and Polylactic Acid (PLA) materials
+- TPU formed the flexible joint/pivot point of the pliers and PLA was used for the rigid handles and jaws of the pliers
+- Print-in-place technique utilized for pivot point of pliers
+- Rigid and flexible materials joined with separately printed parts linked through 
 
 ---
 
