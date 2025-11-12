@@ -68,6 +68,7 @@ gallery:
 
 ## CAD Model
 
+<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH90d2dQT28d5b6028116f269e270d500219" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
 ---
 
