@@ -11,6 +11,7 @@ gallery:
   - image_path: /assets/img/pliers_side.jpeg
   - image_path: /assets/img/pliers_split.jpeg
   - image_path: /assets/img/pliers_vert.jpeg
+  - image_path: /assets/img/IMG_9930.GIF
    
 ---
 
@@ -72,7 +73,7 @@ gallery:
 
 ## Pliers GIF Demonstration
 
-!(IMG_9930.GIF)
+image_path: /assets/img/IMG_9930.GIF
 
 ---
 
