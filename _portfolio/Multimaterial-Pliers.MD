@@ -31,7 +31,17 @@ gallery:
 
 ## Introduction and Description
 
+This project looked into targeting optimizing functional design and multi-material fabrication. The goal wasn't just to model a tool, but to build a pair of functional needle-nose pliers that could perform a specific, precise task: gripping and picking up small through-hole resistors.
 
+
+A standard, single-material 3D print would be a static, non-functional object. To make the pliers truly useful, they needed to automatically spring back to the open position when you let go. This is where the multi-material approach becomes essential.
+
+The design combines two materials with opposite properties:
+
+- Polylactic Acid (PLA): A rigid, stiff plastic used for the main handles and jaws, providing the structural integrity needed to grip objects.
+- Thermoplastic Polyurethane (TPU): A flexible, elastic material used to create the central spring component.
+
+By integrating the flexible TPU element into the rigid PLA body, we get a functional tool that leverages the best of both materials. This write-up documents the design process, the iterations needed to get the spring tension right, and the final 3-part assembly  that brings these materials together.
 
 ---
 
@@ -46,8 +56,6 @@ gallery:
 - The best material combinations 
 
 ---
-
-## Fabrication and Instructions
 
 ### Design and Iterative Process
 
@@ -81,7 +89,7 @@ gallery:
 
 ## References
 
-
+https://doi.org/10.1016/j.matdes.2023.111661
 
 ---
 
