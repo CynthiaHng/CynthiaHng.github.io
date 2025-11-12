@@ -20,31 +20,29 @@ gallery:
 
 ## Features
 
-- Designed with pinch flow fractionation (PFF) to promote particle separation based on size differences and the effects of water flow
-- Resin mold created through CAD modeling using Autodesk Fusion 360 paired with a Form 4 clear resin printer
-- Actual model created with PDMS casting and glass bonding for optical clarity and sealed channels for experimentation
-- Uses 2.2 mm inlet and outlet ports for tube attachment (shown in gallery) 
-- Channel walls are designed to be at least 3 mm from the device's edge to prevent breakage or failure in the mold creation process
-- The minimum feature sizes are 85 µm in the (XY) and 25 µm (Z)
-- An aspect ratio of 4:1 or less was respected to prevent taller features from breaking off during the demolding process
-- Outlet channels were created to help balance hydraulic resistance within the device to optimize equalized flow for the particle streams
-- Space within the device was optimized and made intentional to avoid bubble formation streamline disruption
-
 - Designed on Autodesk Fusion 360 for both flexible joint and rigid structures, generated to promote capabilities in open and closed flexible states of pliers
 - Fused-Filament Fabrication (FFF) printing was utilized with Thermoplastic Polyurethane (TPU) and Polylactic Acid (PLA) materials
 - TPU formed the flexible joint/pivot point of the pliers and PLA was used for the rigid handles and jaws of the pliers
 - Print-in-place technique utilized for pivot point of pliers
-- Rigid and flexible materials joined with separately printed parts linked through 
+- Rigid and flexible materials joined with separately printed parts linked together by clipping in
 
 ---
 
 ## Introduction and Description
 
+
+
 ---
 
 ### Print-in-place Parts
 
+- Print-in-place models are designs that can come off the 3D printer and be completely functional without any post-process assembly. They are designed to work immediately after being taken off the print bed. This is achieved by designing clearances for joints, or in this case, utilizing the grid shape and no-fill format for TPU to create the flexible joint.
 
+- Some single-material print-in-places may lead to unreliable movement or crunchy results but in multi-material, such as the project, utilizing flexible material like TPU can help promote more flexible motion on hinges.
+
+#### Research
+
+- The best material combinations 
 
 ---
 
@@ -63,6 +61,7 @@ gallery:
 
 ### Print Settings
 
+- Using SuperSlicer 2.7 Beta
 
 ---
 
@@ -72,6 +71,7 @@ gallery:
 ---
 
 ## Pliers GIF Demonstration
+
 
 
 ---
