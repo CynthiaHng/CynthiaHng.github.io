@@ -72,7 +72,7 @@ gallery:
 
 ## Pliers GIF Demonstration
 
-![Pliers GIF Demonstration](IMG_9930.GIF)
+!(IMG_9930.GIF)
 
 ---
 
