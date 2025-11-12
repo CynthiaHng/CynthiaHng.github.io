@@ -57,6 +57,8 @@ gallery:
 
 ### Relevant Specifications
 
+- Jaw Length: 42mm
+- Jaw Capacity: 25.4mm
 
 ---
 
@@ -67,6 +69,7 @@ gallery:
 - Perimeters 3 minimum
 - Solid layers: 0 for both top and bottom
 - Infill: Grid sparse infill pattern; density: 25%; Top infill pattern: Monotonic
+- Supports: No
 
 ---
 
