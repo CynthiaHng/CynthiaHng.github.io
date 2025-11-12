@@ -99,7 +99,7 @@ The final design consists of the two rigid PLA handles and a single, optimized T
 
 ## References
 
-https://doi.org/10.1016/j.matdes.2023.111661
+Nazir, A., Gokcekaya, O., Md Masum Billah, K., Ertugrul, O., Jiang, J., Sun, J., & Hussain, S. (2023). Multi-material additive manufacturing: A systematic review of design, properties, applications, challenges, and 3D printing of materials and cellular metamaterials. *Materials & Design*, *226*, 111661. [https://doi.org/10.1016/j.matdes.2023.111661](https://doi.org/10.1016/j.matdes.2023.111661)
 
 ---
 
