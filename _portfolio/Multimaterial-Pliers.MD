@@ -59,10 +59,7 @@ The fabrication of intricate geometries.
 Enhanced functionality and improved mechanical properties.
 The combination of different material properties (like rigid and soft) into a single component.
 A great example of this concept from the article is soft robotics. Soft robots require the seamless integration of soft, flexible materials (like elastomers) for movement and rigid materials for structure. MMAM is essential for this, as it allows for the creation of complex actuators and flexible joints (like your pliers) that are "inspired by nature" (Nazir et al., 2023).
-Best Combinations of Materials
-The article doesn't state a single "best" combination, but it systematically reviews which combinations are most studied and what the challenges are.
-Most Investigated Categories: The two most widely researched categories of materials for MMAM are polymers and metals.
-Polymer-Polymer Combinations: For projects like yours, the "Polymer-Polymer" category is the most relevant. This includes combining rigid polymers with flexible elastomers.
+The article doesn't state a single "best" combination, but it systematically reviews which combinations are most studied and what the challenges are. But the two most widely researched categories of materials for MMAM are polymers and metals. For projects like the multimaterial pliers, the "Polymer-Polymer" category is the most relevant. This includes combining rigid polymers with flexible elastomers.
 
 
 Key Challenges: The main challenges in printing dissimilar polymers are:
