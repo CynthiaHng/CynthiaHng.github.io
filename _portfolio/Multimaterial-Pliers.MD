@@ -59,7 +59,17 @@ By integrating the flexible TPU element into the rigid PLA body, we get a functi
 
 ### Design and Iterative Process
 
+The pliers were designed from scratch in Autodesk Fusion 360 with the 3-part assembly caveat in mind. This meant creating two rigid PLA handles and one separate TPU spring that could be hand-pressed together.
 
+The biggest challenge wasn't just modeling the pliers, but nailing the tolerances. Getting two different materials (rigid PLA and flexible TPU) from different printers to fit together perfectly is all about trial and error.
+
+Prototyping: Before even thinking about printing the full pliers, I followed the advice in the project description and printed just the mating geometries. This was a massive time-saver. I printed the small section of the PLA handle where the TPU spring would slot in and the corresponding part of the spring itself.
+
+Iteration: My first test fit was too loose, and the spring would have fallen out. I adjusted the model to have a tighter interference fit and reprinted the test pieces. After a couple of tries, I found the sweet spot where the parts would snap together securely by hand.
+
+The Spring: Getting the spring's "feel" right was the next iteration. The assignment noted that the spring's geometry would determine the pliers' capacity and flex. My first full spring design was too thick, making it way too stiff and hard to close. I went back and designed a thinner version, which was much more flexible. I also printed the spring geometry by itself to test the flex before committing to the final assembly print.
+
+The final design consists of the two rigid PLA handles and a single, optimized TPU spring. The spring element is designed to snap firmly into recessed slots in both handles, acting as both the pivot and the return mechanism.
 
 ---
 
