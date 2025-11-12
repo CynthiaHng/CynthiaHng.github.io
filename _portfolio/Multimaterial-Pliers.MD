@@ -72,7 +72,7 @@ gallery:
 
 ## Pliers GIF Demonstration
 
-- image_path: /assets/img/IMG_9930.GIF
+![Pliers GIF Demonstration](IMG_9930.GIF)
 
 ---
 
