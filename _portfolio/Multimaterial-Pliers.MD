@@ -60,25 +60,24 @@ gallery:
 
 ---
 
-### Print Settings
+### Print Settings (specifics and changes made)
 
 - Using SuperSlicer 2.7 Beta
+- VORON 300 0.6 Nozzle Blue
+- Perimeters 3 minimum
+- Solid layers: 0 for both top and bottom
+- Infill: Grid sparse infill pattern; density: 25%; Top infill pattern: Monotonic
 
 ---
 
 ## CAD Model
 
-<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH90d2dQT28d5b6028116f269e270d500219" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
-
----
-
-## Pliers GIF Demonstration
-
-image_path: /assets/img/IMG_9930.GIF
+<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH90d2dQT28d5b6028119f9bf7d81bd63306" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
 
 ---
 
 ## References
+
 
 
 ---
