@@ -53,7 +53,25 @@ By integrating the flexible TPU element into the rigid PLA body, we get a functi
 
 #### Research
 
-- The best material combinations 
+Using the research from "Multi-material additive manufacturing: A systematic review of design, properties, applications, challenges, and 3D printing of materials and cellular metamaterials," they look into Multi-Material Additive Manufacturing (MMAM), similarly to print-in-place.
+The goal of MMAM is to move beyond simple, single-material objects and create functional, high-value products. The article highlights that MMAM allows for:
+The fabrication of intricate geometries.
+Enhanced functionality and improved mechanical properties.
+The combination of different material properties (like rigid and soft) into a single component.
+A great example of this concept from the article is soft robotics. Soft robots require the seamless integration of soft, flexible materials (like elastomers) for movement and rigid materials for structure. MMAM is essential for this, as it allows for the creation of complex actuators and flexible joints (like your pliers) that are "inspired by nature" (Nazir et al., 2023).
+Best Combinations of Materials
+The article doesn't state a single "best" combination, but it systematically reviews which combinations are most studied and what the challenges are.
+Most Investigated Categories: The two most widely researched categories of materials for MMAM are polymers and metals.
+Polymer-Polymer Combinations: For projects like yours, the "Polymer-Polymer" category is the most relevant. This includes combining rigid polymers with flexible elastomers.
+
+
+Key Challenges: The main challenges in printing dissimilar polymers are:
+
+- Poor Bonding: Materials with low chemical affinity or incompatibility can have "inferior bonding strength" at the interface.
+- Thermal Mismatch: Different plastics have different thermal expansion coefficients, which can cause "dissimilar shrinkage upon cooling," leading to distortion and "low dimensional stability."
+- Specific Combinations Mentioned: The article specifically lists the exact combination you are using in its data tables.
+- PLA and TPU: This combination is listed as having been studied for its impact resistance and tensile properties.
+- ABS and TPU: This is another common rigid-flexible combination shown in the article, with studies focusing on its use in fabricating items like a wrist orthosis (Nazir et al., 2023).
 
 ---
 
