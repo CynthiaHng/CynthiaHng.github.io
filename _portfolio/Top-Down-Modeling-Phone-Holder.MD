@@ -17,58 +17,58 @@ gallery:
 
 ## Features
 
-- **Top-Down Design:** Modeled entirely within context in Autodesk Fusion 360, referencing the master geometry of the handlebars and the phone for perfect fitment.
-- **Tool-Free Operation:** Designed for quick phone attachment and removal without the need for screwdrivers or hex keys.
-- **Detent Rotation Mechanism:** Integrated spring-loaded ball bearing system allowing the phone to snap securely between portrait and landscape orientations.
-- **Vibration Resistance:** Secure clamping geometry designed to withstand road vibrations while maintaining the user's preferred viewing angle.
-- **Custom Fitment:** Specifically sized for a [25.4mm / 22.2mm] handlebar diameter.
+- **Top-Down Design:** Modeled entirely within context in Autodesk Fusion 360, utilizing the master geometry of the handlebars and mobile device to ensure precise fitment.
+- **Tool-Free Operation:** Engineered for rapid attachment and removal, eliminating the requirement for external drivers or hex keys.
+- **Detent Rotation Mechanism:** Integrated spring-loaded ball bearing system allowing the device to snap securely between portrait and landscape orientations.
+- **Vibration Resistance:** Secure clamping geometry optimized to withstand road vibrations while maintaining the selected viewing angle.
+- **Custom Fitment:** Dimensioned specifically for a [25.4mm / 22.2mm] handlebar diameter.
 
 ---
 
 ## Introduction and Top-Down Methodology
 
-The objective of this project was to design and filament 3D print a phone holder for a bike or scooter that prioritizes user experience. The key constraints were that the phone must attach quickly without separate tools and rotate easily between landscape and portrait orientations.
+The primary objective of this project was the design and additive manufacturing of a bicycle/scooter phone mount prioritizing user ergonomics. Key constraints dictated that the device must attach securely without separate tools and rotate seamlessly between landscape and portrait orientations.
 
-However, the core engineering challenge was not just the physical utility, but the digital workflow. This project was executed using a **Top-Down Modeling** approach. Unlike traditional "bottom-up" modeling, where parts are designed in isolation and then assembled, top-down modeling creates components *in context* using a shared master structure.
+The core engineering challenge focused on the digital workflow, specifically the implementation of a **Top-Down Modeling** approach. Unlike traditional "bottom-up" modeling, where parts are designed in isolation and subsequently assembled, top-down modeling generates components *in context* using a shared master structure.
 
 ### Leveraging Top-Down Design
-I began the CAD process by creating a "skeleton" or master layout in a new component. I modeled the handlebars (the fixed component) and the phone (the target object) first, positioning them in space relative to how a rider would view them. These two existing geometries served as the primary drivers for the rest of the design.
+The CAD process was initiated by establishing a "skeleton" or master layout within a new component. The fixed component (handlebars) and the target object (mobile device) were modeled first to define the spatial envelope relative to the user's viewpoint. These two existing geometries functioned as the primary drivers for the subsequent assembly.
 
-Instead of guessing dimensions or measuring back and forth, I projected the geometry of the handlebars directly into the sketches for the mounting clamp. Similarly, the phone holder's grip width was driven by the imported phone model. This ensured that if the diameter of the handlebars or the size of the phone changed in the master sketch, the entire holder assembly would automatically update to fit. This parametric approach was crucial for maintaining tight tolerances for the 3D printed parts.
+Rather than relying on isolated dimensional estimates, the geometry of the handlebars was projected directly into the sketches for the mounting clamp. Similarly, the grip width of the cradle was driven by the imported phone model. This parametric approach ensured that modifications to the master sketch—such as changes to handlebar diameter or device dimensions—would automatically propagate through the assembly, maintaining the necessary tolerances for 3D printed parts.
+
 ---
 
 ## Design Rationale
 
-The design is broken down into three main sub-assemblies: the Handlebar Mount, the Rotation Core, and the Phone Cradle.
+The assembly is divided into three primary sub-systems: the Handlebar Mount, the Rotation Core, and the Phone Cradle.
 
 ### The Rotation Mechanism
-To satisfy the requirement of rotating the phone between portrait and landscape without tools, I implemented a **detent mechanism**. This system uses a small spring-loaded ball bearing housed within the rotating hub. The bearing presses against a track with specific notches (detents) located at 0 and 90 degrees.
+To satisfy the requirement for tool-free rotation, a **detent mechanism** was implemented. This system utilizes a spring-loaded ball bearing housed within the rotating hub, which interacts with specific notches (detents) located at 0 and 90 degrees.
 
-* **Does it work well?** The detent provides tactile feedback—a satisfying "click"—when the phone reaches the correct orientation. It holds the phone securely against gravity and vibration but yields when the user applies intentional rotational force.
-* **Why this choice?** A simple friction fit would eventually wear down and become loose. The detent system creates a mechanical lock that remains consistent over repeated cycles.
+* **Performance:** The detent provides tactile feedback—a distinct "click"—upon reaching the correct orientation. It secures the device against gravity and vibration but yields when intentional rotational force is applied.
+* **Justification:** A mechanical lock was selected over a friction-fit system to prevent wear-induced loosening and ensure consistent performance over repeated duty cycles.
 
 ### 3D Printing Considerations and Tolerances
-Designing for Fused Filament Fabrication (FFF) required specific dimensional adjustments:
-* **Clearances:** The rotation mechanism required a parametrized clearance gap between the moving hub and the static mount to prevent them from fusing together or grinding during operation.
-* **Hole Sizing:** Holes for the M5 heat-set inserts were undersized slightly to allow the heated brass to displace the plastic and form a strong bond.
-* **Orientation:** The clamping arms were printed flat on the bed to align the layer lines with the stress forces, preventing snapping when tightened around the handlebars.
+Designing for Fused Filament Fabrication (FFF) necessitated specific dimensional adjustments:
+* **Clearances:** The rotation mechanism incorporates parametrized clearance gaps between the dynamic hub and the static mount to prevent component fusion or abrasion during operation.
+* **Hole Sizing:** Bores for M5 heat-set inserts were intentionally undersized to allow the heated brass to displace the thermoplastic, ensuring a robust mechanical bond.
+* **Orientation:** Clamping arms were printed in a flat orientation on the build plate to align layer lines with stress vectors, thereby maximizing tensile strength during tightening.
 
 ---
 
 ## Fabrication and Materials
 
 ### Printing Technology
-I utilized FFF (filament printing) for all components. While powder printing was an option for higher strength, I found that properly oriented parts provided sufficient structural integrity for this application.
+Fused Filament Fabrication (FFF) was utilized for all structural components. While powder-based printing offers high isotropic strength, it was determined that proper part orientation provided sufficient structural integrity for this application.
 
 * **Material Used:** [Insert Material: e.g., PLA / PETG]
-    * *Why?* [Insert Reason: e.g., PLA was chosen for its rigidity / PETG for outdoor durability].
-* **Resolution:** 0.2mm layer height for a balance of speed and detail.
+    * *Rationale:* [Insert Reason: e.g., PLA was selected for high rigidity / PETG was selected for UV resistance and outdoor durability].
+* **Resolution:** 0.2mm layer height was selected to balance print velocity with geometric fidelity.
 
 ### Components
-1.  **The Clamp:** Printed with high infill to resist the crushing force of the mounting bolts.
-2.  **The Cradle:** Printed with supports to accommodate the overhangs of the phone retention clips.
-3.  **The Detent Pin:** I opted to use the supplied metal ball bearings and compression springs (Kit A) rather than printing them, as 3D printed springs often relax under constant load (creep).
-
+1. **The Clamp:** Fabricated with high infill density to withstand the compressive forces exerted by the mounting hardware.
+2. **The Cradle:** Printed utilizing support structures to accommodate the overhang geometry of the retention clips.
+3. **The Detent Pin:**
 ---
 
 ## Assembly Instructions
