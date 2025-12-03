@@ -12,10 +12,6 @@ gallery:
   - image_path: /assets/img/holder_empty_back.jpeg
   - image_path: /assets/img/spin_video_1.mov
   - image_path: /assets/img/spin_video_2_final.mp4
-    
----
-
-# Top-Down Modeled Bike Phone Holder
 
 ---
 
