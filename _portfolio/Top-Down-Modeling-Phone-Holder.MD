@@ -17,11 +17,10 @@ gallery:
 
 ## Features
 
-- **Top-Down Structure:** Modeled entirely within context in Autodesk Fusion 360. The design references the master geometry of the handlebars and the mobile device as the primary drivers, ensuring precise, interference-free fitment.
-- **Tool-Free Quick Release:** Engineered for rapid attachment and removal, utilizing a hand-tightened clamping system that eliminates the requirement for external drivers or hex keys.
-- **Indexed Detent Rotation:** Integrated spring-loaded ball bearing system allowing the device to snap securely between portrait (0°) and landscape (90°) orientations with positive haptic feedback.
-- **Vibration Damping & Stability:** Secure clamping geometry optimized to withstand high-frequency road vibrations while maintaining the selected viewing angle without drift.
-- **Customizable Interface:** Dimensioned specifically for a [25.4mm / 22.2mm] handlebar diameter, with parametric history allowing for rapid adaptation to other standard tube sizes.
+- **Top-Down Structure:** Modeled entirely within context in Autodesk Fusion 360. The design references the master geometry of the handlebars and the mobile device as the primary drivers, ensuring precise, interference-free fitment. Multiple models were made and sectioned off using top-down assembly.
+- **Tool-Free Convenience:** Engineered for rapid attachment and removal of the phone after clamp has been securely attached onto a handlebar but also allows for easy adjustment of clamp angle and location due to two-piece structure.
+- **Ball Detent Mechanism:** Integrated spring-loaded ball bearing system that allows the device to be turned at 90, 180, 270, and 360 degrees.
+- **Parameterized:** All dimensions on the Fusion 360 CAD model is parameterized to be customized for ideal fits.
 
 ---
 
@@ -59,16 +58,16 @@ Designing for Fused Filament Fabrication (FFF) necessitated specific dimensional
 ## Fabrication and Materials
 
 ### Printing Technology
-Fused Filament Fabrication (FFF) was utilized for all structural components. While alternative methods like SLS (Selective Laser Sintering) offer isotropic strength, it was determined that proper part orientation and slicer settings provided sufficient structural integrity for this application.
+Fused Filament Fabrication (FFF) was utilized for all structural components.
 
 * **Material Used:** PLA and TPU
     * *Rationale:* PLA was selected for its high stiffness and modulus of elasticity and TPU for its flexibility and elasticity to act as the phone holder.
 * **Resolution & Density:** A 0.2mm layer height was selected to balance print velocity with geometric fidelity. All load-bearing parts were printed with 4 perimeter walls (shells) to maximize hoop strength around fasteners.
 
 ### Components
-1. **The Clamp:** Fabricated with 20% infill density to withstand the compressive forces exerted by the mounting hardware. The geometry includes filleted stress-relief points to prevent cracking at sharp corners.
-2. **The Phone Holder:** Printed utilizing support structures to accommodate the overhang geometry of the retention clips. The clips were designed with a slight inward flex to actively grip the device.
-3. **The Detent Component:** Standard metal ball bearings and compression springs (Kit A) were utilized rather than printed alternatives. Thermoplastic springs are susceptible to **viscoelastic creep** (permanent deformation) under constant load, which would result in a loss of clamping force over time.
+1. **The Clamp:** Fabricated with 20% infill density to withstand the compressive forces exerted by the mounting hardware. Holes are created to allow for heat sets and bolts to be attached for securement.
+2. **The Phone Holder:** A flexible TPU printed phone holder that is customized to the user's phone by using a phone case as the guiding model.
+3. **The Detent Component:** Standard metal ball bearings and compression springs were utilized to create a detent mechanism that is enclosed within the top clamp section. The detent spin component is a separate component that is attached to the phone holder but separate from the clamp to allow for rotation.
 
 ---
 
