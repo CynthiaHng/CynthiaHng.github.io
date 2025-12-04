@@ -17,7 +17,7 @@ gallery:
 
 ## Features
 
-- **Parametric Top-Down Architecture:** Modeled entirely within context in Autodesk Fusion 360. The design references the master geometry of the handlebars and the mobile device as the primary drivers, ensuring precise, interference-free fitment.
+- **Top-Down Structure:** Modeled entirely within context in Autodesk Fusion 360. The design references the master geometry of the handlebars and the mobile device as the primary drivers, ensuring precise, interference-free fitment.
 - **Tool-Free Quick Release:** Engineered for rapid attachment and removal, utilizing a hand-tightened clamping system that eliminates the requirement for external drivers or hex keys.
 - **Indexed Detent Rotation:** Integrated spring-loaded ball bearing system allowing the device to snap securely between portrait (0°) and landscape (90°) orientations with positive haptic feedback.
 - **Vibration Damping & Stability:** Secure clamping geometry optimized to withstand high-frequency road vibrations while maintaining the selected viewing angle without drift.
@@ -40,7 +40,7 @@ Rather than relying on isolated dimensional estimates, the geometry of the handl
 
 ## Design Rationale
 
-The assembly is divided into three primary sub-systems: the Handlebar Mount (Stator), the Rotation Core (Rotor), and the Phone Cradle.
+The assembly is divided into three primary sub-systems: the clamp component, the detent component, and the phone holder.
 
 ### The Rotation Mechanism
 To satisfy the requirement for tool-free rotation, a **mechanical detent mechanism** was implemented. This system utilizes a spring-loaded steel ball bearing housed within the rotating hub, which interacts with a radial track containing specific indexing notches (detents) located at 0 and 90 degrees.
@@ -61,14 +61,14 @@ Designing for Fused Filament Fabrication (FFF) necessitated specific dimensional
 ### Printing Technology
 Fused Filament Fabrication (FFF) was utilized for all structural components. While alternative methods like SLS (Selective Laser Sintering) offer isotropic strength, it was determined that proper part orientation and slicer settings provided sufficient structural integrity for this application.
 
-* **Material Used:** [Insert Material: e.g., PLA+ / PETG / ASA]
-    * *Rationale:* [Insert Reason: e.g., PLA+ was selected for its high stiffness and modulus of elasticity / PETG was selected for its impact resistance and ductility].
+* **Material Used:** PLA and TPU
+    * *Rationale:* PLA was selected for its high stiffness and modulus of elasticity and TPU for its flexibility and elasticity to act as the phone holder.
 * **Resolution & Density:** A 0.2mm layer height was selected to balance print velocity with geometric fidelity. All load-bearing parts were printed with 4 perimeter walls (shells) to maximize hoop strength around fasteners.
 
 ### Components
-1. **The Clamp:** Fabricated with high infill density (40%+) to withstand the compressive forces exerted by the mounting hardware. The geometry includes filleted stress-relief points to prevent cracking at sharp corners.
-2. **The Cradle:** Printed utilizing support structures to accommodate the overhang geometry of the retention clips. The clips were designed with a slight inward flex to actively grip the device.
-3. **The Detent Pin:** Standard metal ball bearings and compression springs (Kit A) were utilized rather than printed alternatives. Thermoplastic springs are susceptible to **viscoelastic creep** (permanent deformation) under constant load, which would result in a loss of clamping force over time.
+1. **The Clamp:** Fabricated with 20% infill density to withstand the compressive forces exerted by the mounting hardware. The geometry includes filleted stress-relief points to prevent cracking at sharp corners.
+2. **The Phone Holder:** Printed utilizing support structures to accommodate the overhang geometry of the retention clips. The clips were designed with a slight inward flex to actively grip the device.
+3. **The Detent Component:** Standard metal ball bearings and compression springs (Kit A) were utilized rather than printed alternatives. Thermoplastic springs are susceptible to **viscoelastic creep** (permanent deformation) under constant load, which would result in a loss of clamping force over time.
 
 ---
 
