@@ -26,14 +26,15 @@ gallery:
 
 ## Introduction and Top-Down Methodology
 
-The primary objective of this project was the design, engineering, and additive manufacturing of a bicycle/scooter phone mount prioritizing user ergonomics and mechanical reliability. Key functional constraints dictated that the device must attach securely without separate tools and rotate seamlessly between landscape and portrait orientations to accommodate varying navigation applications.
+This project focused on designing an additive manufacturing technique nown as Top-Down Modeling to create a bicycle/scooter phone mount that allowed for rotational flexibility while including flexibility. Key functional constraints of this project dictated that the device was to be attachable without separate tools for assembly (after setup it is easily accessible when it comes to functionality). It also allows for rotational adjustment by converting seamlessly between landscape and portrait orientations to adjust to the user's needs.
 
-The core engineering challenge focused on the digital workflow, specifically the implementation of a **Top-Down Modeling** approach. Unlike traditional "bottom-up" modeling, where parts are designed in isolation and subsequently assembled via constraints, top-down modeling generates components *in context* using a shared master structure.
+The core engineering challenge focused on the digital workflow, specifically the implementation of a Top-Down Modeling approach. Unlike traditional modeling, where parts are designed in isolation and subsequently assembled via constraints, top-down modeling generates components in context of each component using a shared master structure.
 
 ### Leveraging Top-Down Design
-The CAD process was initiated by establishing a "skeleton" or master sketch layout within a parent component. The fixed environmental component (handlebars) and the target object (mobile device) were modeled first to define the spatial envelope and visual ergonomics relative to the rider. These two existing geometries functioned as the "single source of truth" for the subsequent assembly.
 
-Rather than relying on isolated dimensional estimates, the geometry of the handlebars was projected directly into the sketches for the mounting clamp. Similarly, the grip width of the cradle was driven by the imported phone model. This **parametric associativity** ensured that modifications to the master sketch—such as changes to handlebar diameter or device dimensions—would automatically propagate through the entire assembly hierarchy. This workflow was critical for maintaining tight interference fits and tolerance stack-ups for the final 3D printed assembly.
+The CAD process was initiated by creating a master sketch layout of the fixed handlebars component along with multiple versions of the target clamp design ideas. Additional shared components such as the phone holder, the detent component, and the ball-spring mechanism were modeled after and used in a shared component folder for easy duplication to each clamp design.
+
+Rather than taking dimensional estimates for each component, parameters were used to allow for adjustments towards the geometry of the handlebars and mounting clamps given the provided diameters of the handlebars. Similarly, the cradle for the phone holder was taken by directly using an imported phone model of the user's desired choice. These steps ensured that modifications to the master sketch would become uniform for all additional components that followed and allowed for tight interference fits, though small amounts of clearance was ensured for printing errors.
 
 ---
 
@@ -42,7 +43,7 @@ Rather than relying on isolated dimensional estimates, the geometry of the handl
 The assembly is divided into three primary sub-systems: the clamp component, the detent component, and the phone holder.
 
 ### The Rotation Mechanism
-To satisfy the requirement for tool-free rotation, a **mechanical detent mechanism** was implemented. This system utilizes a spring-loaded steel ball bearing housed within the rotating hub, which interacts with a radial track containing specific indexing notches (detents) located at 0 and 90 degrees.
+To satisfy the requirement for tool-free rotation, a mechanical detent mechanism was implemented. This system utilizes a spring-loaded steel ball bearing housed within the rotating hub, which interacts with a radial track containing specific indexing notches (detents) located at 0 and 90 degrees.
 
 * **Performance:** The detent provides distinct tactile feedback—a "click"—upon reaching the correct orientation. The spring constant was selected to secure the device against gravity and vibration-induced torque, yet allow the mechanism to yield when intentional rotational force is applied by the user.
 * **Justification:** A mechanical lock was selected over a simple friction-fit system. Friction fits rely on surface abrasion and are prone to wear-induced loosening over time. The detent system ensures consistent holding torque over repeated duty cycles and thousands of rotations.
@@ -61,12 +62,12 @@ Designing for Fused Filament Fabrication (FFF) necessitated specific dimensional
 Fused Filament Fabrication (FFF) was utilized for all structural components.
 
 * **Material Used:** PLA and TPU
-    * *Rationale:* PLA was selected for its high stiffness and modulus of elasticity and TPU for its flexibility and elasticity to act as the phone holder.
+    * *Rationale:* PLA was selected for its high stiffness and ability to withstand pressure when screwed tightly, as well as not deforming when pressure is applied, and TPU for its flexibility and elasticity to act as the phone holder.
 * **Resolution & Density:** A 0.2mm layer height was selected to balance print velocity with geometric fidelity. All load-bearing parts were printed with 4 perimeter walls (shells) to maximize hoop strength around fasteners.
 
 ### Components
-1. **The Clamp:** Fabricated with 20% infill density to withstand the compressive forces exerted by the mounting hardware. Holes are created to allow for heat sets and bolts to be attached for securement.
-2. **The Phone Holder:** A flexible TPU printed phone holder that is customized to the user's phone by using a phone case as the guiding model.
+1. **The Clamp:** Fabricated with 20% infill density to withstand the compressive forces exerted by the mounting hardware. Holes are created to allow for heat sets and bolts to be attached for securement. PLA was used for stability and rigidity for the clamp component and bolts were used to ensure a secure hold.
+2. **The Phone Holder:** A flexible TPU printed phone holder that is customized to the user's phone by using phone case models to create personalized fits.
 3. **The Detent Component:** Standard metal ball bearings and compression springs were utilized to create a detent mechanism that is enclosed within the top clamp section. The detent spin component is a separate component that is attached to the phone holder but separate from the clamp to allow for rotation.
 
 ---
