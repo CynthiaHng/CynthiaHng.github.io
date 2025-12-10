@@ -11,7 +11,7 @@ gallery:
   - image_path: /assets/img/holder_empty_back_upright.jpeg
   - image_path: /assets/img/holder_empty_back.jpeg
   - image_path: /assets/img/spin_video_1.mov
-  - image_path: /assets/img/spin_video_2_final.mp4
+  - image_path: /assets/img/spin_video_2_final.gif
 
 ---
 
