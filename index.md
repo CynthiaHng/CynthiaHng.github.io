@@ -22,7 +22,7 @@ feature_row:
     alt: "Multimaterial Pliers"
     title: "3D Printed Multimaterial Pliers"
     excerpt: "Multimaterial Pliers 3D CAD Printed in TPU and PLA Through FFF Printing"
-  - image_path: assets/img/holder_empty_front
+  - image_path: assets/img/holder_empty_front.jpeg
     alt: "Bike Phone Holder"
     title: "Top-Down 3D Modeled Bike Phone Holder"
     excerpt: "A Custom 3D Printed Phone Holder for Bike or Scooter Handles Through FFF Printing and Top-Down Modeling"
