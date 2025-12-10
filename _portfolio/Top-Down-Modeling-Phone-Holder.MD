@@ -5,13 +5,18 @@ header:
   image: /assets/img/phone_holder_side.jpeg
   teaser: /assets/img/holder_empty_side.jpeg
 gallery:
-  - image_path: /assets/img/holder_empty_side_tilt.jpeg
   - image_path: /assets/img/holder_empty_front.jpeg
   - image_path: /assets/img/holder_empty_side.jpeg
   - image_path: /assets/img/holder_empty_back_upright.jpeg
   - image_path: /assets/img/holder_empty_back.jpeg
-  - image_path: /assets/img/spin_video_1.mov
   - image_path: /assets/img/rotating_phone_holder.gif
+  - image_path: /assets/img/render1.png
+  - image_path: /assets/img/render2.png
+  - image_path: /assets/img/render3.png
+  - image_path: /assets/img/render4.png
+  - image_path: /assets/img/sectionanalysis1.png
+  - image_path: /assets/img/sectionanalysis2.png
+
 ---
 
 ## Features
