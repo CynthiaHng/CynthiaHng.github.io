@@ -94,4 +94,4 @@ Fused Filament Fabrication (FFF) was utilized for all structural components.
 
 ---
 
-{% include gallery caption="Phone Holder Views and Mechanisms" %}
+{% include gallery caption="Phone Holder Gallery" %}
