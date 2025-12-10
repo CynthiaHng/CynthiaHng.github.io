@@ -24,7 +24,7 @@ gallery:
 - **Top-Down Structure:** Modeled entirely within context in Autodesk Fusion 360. The design references the master geometry of the handlebars and the mobile device as the primary drivers, ensuring precise, interference-free fitment. Multiple models were made and sectioned off using top-down assembly.
 - **Tool-Free Convenience:** Engineered for rapid attachment and removal of the phone after clamp has been securely attached onto a handlebar but also allows for easy adjustment of clamp angle and location due to two-piece structure.
 - **Ball Detent Mechanism:** Integrated spring-loaded ball bearing system that allows the device to be turned at 90, 180, 270, and 360 degrees.
-- **Parameterized:** All dimensions on the Fusion 360 CAD model is parameterized to be customized for ideal fits.
+- **Parameterized:** All dimensions on the Fusion 360 CAD model is parameterized to be customized for ideal fits. This allowed for dimensions to be altered, notably dimensions for clearance such as that within the detent mechanism such as the detent box and detent component was made slightly smaller to allow for a more secure fit and to ensure parts were not too big. These dimensions were changed to account for the 3D printing process and allowed for fewer print failures.
 
 ---
 
@@ -47,7 +47,7 @@ Rather than taking dimensional estimates for each component, parameters were use
 The assembly is divided into three primary sub-systems: the clamp component, the detent component, and the phone holder.
 
 ### The Rotation Mechanism
-To satisfy the requirement for tool-free rotation, a mechanical detent mechanism was implemented. This system utilizes a spring-loaded steel ball bearing housed within the rotating hub, which interacts with a radial track containing specific indexing notches (detents) located at 0 and 90 degrees.
+To satisfy the requirement for tool-free rotation, a mechanical detent mechanism was implemented. This system utilizes a spring-loaded steel ball bearing housed within the rotating hub, which interacts with a radial track containing specific indexing notches (detents) located at 0 and 90 degrees all around to allow for full 360 rotation and change between landscape and portrait modes. It works well to avoid swaying without applied force, but is easily adjustable when force is intentionally applied.
 
 * **Performance:** The detent provides distinct tactile feedback—a "click"—upon reaching the correct orientation. The spring constant was selected to secure the device against gravity and vibration-induced torque, yet allow the mechanism to yield when intentional rotational force is applied by the user.
 * **Justification:** A mechanical lock was selected over a simple friction-fit system. Friction fits rely on surface abrasion and are prone to wear-induced loosening over time. The detent system ensures consistent holding torque over repeated duty cycles and thousands of rotations.
@@ -57,6 +57,9 @@ Designing for Fused Filament Fabrication (FFF) necessitated specific dimensional
 * **Clearances:** The rotation mechanism incorporates parametrized clearance gaps (0.2mm - 0.3mm) between the dynamic hub and the static mount. This prevents component fusion during the printing process and mitigates friction caused by layer seams.
 * **Thermal Insert Integration:** Bores for M5 heat-set inserts were intentionally undersized to allow the heated brass knurling to displace the surrounding thermoplastic. This creates a mechanical interlock superior to printing plastic threads, which are prone to stripping under torque.
 * **Anisotropic Optimization:** Clamping arms were printed in a flat orientation on the build plate. This aligns the printed layer lines with the primary stress vectors, utilizing the continuous filament strands to resist tensile loads rather than relying on weaker inter-layer adhesion.
+
+### Idea Rationale
+A two-piece clamp design was utilized to ensure that bolts could apply as much pressure when clamping onto the desired handlebars for a secure hold. The multi-part assembly allows for the parts to be taken apart easily and printed separately if changes were needed, such as if the detent box component needed to be bigger to account for different spring sizes, or the detent component needed to have deeper curves for the ball. The lid also allowed for easy assembly of the ball-spring mechanism while allowing for the lid to be detachable and allowing for the phone holder to also be customizable due to the screw-secure design that was utilized.
 
 ---
 
