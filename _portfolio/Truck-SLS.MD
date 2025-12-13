@@ -93,7 +93,7 @@ Similarly, the through-hole for the main steel axle rod was too tight.
 
 ## CAD Model
 
-<iframe src="https://vanderbilt643.autodesk360.com/g/shares/YOUR_SHARE_LINK_HERE" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH90d2dQT28d5b602811ef32a6b664959981" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
 
 ---
 
