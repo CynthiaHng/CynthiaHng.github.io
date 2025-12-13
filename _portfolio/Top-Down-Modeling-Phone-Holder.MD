@@ -1,100 +1,100 @@
 ---
-title: "Top-Down Modeled Bike Phone Holder"
-excerpt: "A custom 3D printed phone mount featuring a spring-loaded detent mechanism for rotation, designed using top-down CAD modeling techniques."
+title: "Generative Design Skateboard Truck & Motor Mount"
+excerpt: "A lightweight, consolidated electric skateboard truck hanger created using Generative Design in Fusion 360, optimized for Nylon 12 and AlSi10Mg Powder Bed Fusion."
 header:
-  image: /assets/img/phone_holder_side.jpeg
-  teaser: /assets/img/holder_empty_side.jpeg
+  image: /assets/img/truck_iso_render.jpeg
+  teaser: /assets/img/truck_side_profile.jpeg
 gallery:
-  - image_path: /assets/img/holder_empty_front.jpeg
-  - image_path: /assets/img/holder_empty_side.jpeg
-  - image_path: /assets/img/holder_empty_back_upright.jpeg
-  - image_path: /assets/img/holder_empty_back.jpeg
-  - image_path: /assets/img/rotating_phone_holder.gif
-  - image_path: /assets/img/render1.png
-  - image_path: /assets/img/render2.png
-  - image_path: /assets/img/render3.png
-  - image_path: /assets/img/render4.png
-  - image_path: /assets/img/sectionanalysis1.png
-  - image_path: /assets/img/sectionanalysis2.png
-
+  - image_path: /assets/img/truck_front.jpeg
+  - image_path: /assets/img/truck_side.jpeg
+  - image_path: /assets/img/nylon_vs_aluminum.png
+  - image_path: /assets/img/stress_analysis.png
+  - image_path: /assets/img/preserves_obstacles.png
+  - image_path: /assets/img/printed_part_fit_check.jpeg
 ---
 
 ## Features
 
-- **Top-Down Structure:** Modeled entirely within context in Autodesk Fusion 360. The design references the master geometry of the handlebars and the mobile device as the primary drivers, ensuring precise, interference-free fitment. Multiple models were made and sectioned off using top-down assembly.
-- **Tool-Free Convenience:** Engineered for rapid attachment and removal of the phone after clamp has been securely attached onto a handlebar but also allows for easy adjustment of clamp angle and location due to two-piece structure.
-- **Ball Detent Mechanism:** Integrated spring-loaded ball bearing system that allows the device to be turned at 90, 180, 270, and 360 degrees.
-- **Parameterized:** All dimensions on the Fusion 360 CAD model is parameterized to be customized for ideal fits. This allowed for dimensions to be altered, notably dimensions for clearance such as that within the detent mechanism such as the detent box and detent component was made slightly smaller to allow for a more secure fit and to ensure parts were not too big. These dimensions were changed to account for the 3D printing process and allowed for fewer print failures.
+- **Generative Design Workflow:** Modeled using Autodesk Fusion 360's Generative Design extension. Instead of modeling the shape directly, the design was grown based on functional requirements, "preserve" geometries (axles, pivot cups), and "obstacle" geometries (wheels, ground, deck).
+- **Part Consolidation:** Replaces a traditional multi-part assembly (hanger, clamping ring, motor mount bracket, and fasteners) with a single, monolithic component.
+- **Multi-Material Optimization:** Solved simultaneously for two distinct manufacturing materials: Nylon 12 (SLS) and AlSi10Mg (Direct Metal Laser Sintering), highlighting how material properties influence topological outcomes.
+- **Lightweighting:** Optimized to minimize mass while maintaining a safety factor against the static weight of the rider and the dynamic torsional torque of the electric motor.
 
 ---
 
-## Introduction and Top-Down Methodology
+## Introduction and Generative Methodology
 
-This project focused on designing an additive manufacturing technique nown as Top-Down Modeling to create a bicycle/scooter phone mount that allowed for rotational flexibility while including flexibility. Key functional constraints of this project dictated that the device was to be attachable without separate tools for assembly (after setup it is easily accessible when it comes to functionality). It also allows for rotational adjustment by converting seamlessly between landscape and portrait orientations to adjust to the user's needs.
+This project focused on the application of Generative Design (GD) to address a gap in the Digital Fabrication Lab's transportation options. The objective was to build a custom electric longboard truck that integrates the motor mount directly into the hanger geometry. Unlike the "Top-Down" approach used in previous projects, this workflow utilized *computational synthesis*.
 
-The core engineering challenge focused on the digital workflow, specifically the implementation of a Top-Down Modeling approach. Unlike traditional modeling, where parts are designed in isolation and subsequently assembled via constraints, top-down modeling generates components in context of each component using a shared master structure.
+The core engineering challenge was shifting from explicitly drawing geometry to defining the *problem definition*.
 
-### Leveraging Top-Down Design
+### Leveraging the Generative Workspace
 
-The CAD process was initiated by creating a master sketch layout of the fixed handlebars component along with multiple versions of the target clamp design ideas. Additional shared components such as the phone holder, the detent component, and the ball-spring mechanism were modeled after and used in a shared component folder for easy duplication to each clamp design.
+The CAD process began by defining the "Preserve Geometry"—the critical interfaces that must remain (the axle housing, the pivot cup, and the kingpin bushing seat). "Obstacle Geometry" was then modeled to represent areas where material *cannot* go, such as the spinning wheels, the ground clearance zone, and the turning radius of the deck.
 
-Rather than taking dimensional estimates for each component, parameters were used to allow for adjustments towards the geometry of the handlebars and mounting clamps given the provided diameters of the handlebars. Similarly, the cradle for the phone holder was taken by directly using an imported phone model of the user's desired choice. These steps ensured that modifications to the master sketch would become uniform for all additional components that followed and allowed for tight interference fits, though small amounts of clearance was ensured for printing errors.
-
----
-
-## Design Rationale
-
-The assembly is divided into three primary sub-systems: the clamp component, the detent component, and the phone holder.
-
-### The Rotation Mechanism
-To satisfy the requirement for tool-free rotation, a mechanical detent mechanism was implemented. This system utilizes a spring-loaded steel ball bearing housed within the rotating hub, which interacts with a radial track containing specific indexing notches (detents) located at 0 and 90 degrees all around to allow for full 360 rotation and change between landscape and portrait modes. It works well to avoid swaying without applied force, but is easily adjustable when force is intentionally applied.
-
-* **Performance:** The detent provides distinct tactile feedback—a "click"—upon reaching the correct orientation. The spring constant was selected to secure the device against gravity and vibration-induced torque, yet allow the mechanism to yield when intentional rotational force is applied by the user.
-* **Justification:** A mechanical lock was selected over a simple friction-fit system. Friction fits rely on surface abrasion and are prone to wear-induced loosening over time. The detent system ensures consistent holding torque over repeated duty cycles and thousands of rotations.
-
-### 3D Printing Considerations and Tolerances
-Designing for Fused Filament Fabrication (FFF) necessitated specific dimensional adjustments to account for the material properties of thermoplastics:
-* **Clearances:** The rotation mechanism incorporates parametrized clearance gaps (0.2mm - 0.3mm) between the dynamic hub and the static mount. This prevents component fusion during the printing process and mitigates friction caused by layer seams.
-* **Thermal Insert Integration:** Bores for M5 heat-set inserts were intentionally undersized to allow the heated brass knurling to displace the surrounding thermoplastic. This creates a mechanical interlock superior to printing plastic threads, which are prone to stripping under torque.
-* **Anisotropic Optimization:** Clamping arms were printed in a flat orientation on the build plate. This aligns the printed layer lines with the primary stress vectors, utilizing the continuous filament strands to resist tensile loads rather than relying on weaker inter-layer adhesion.
-
-### Idea Rationale
-A two-piece clamp design was utilized to ensure that bolts could apply as much pressure when clamping onto the desired handlebars for a secure hold. The multi-part assembly allows for the parts to be taken apart easily and printed separately if changes were needed, such as if the detent box component needed to be bigger to account for different spring sizes, or the detent component needed to have deeper curves for the ball. The lid also allowed for easy assembly of the ball-spring mechanism while allowing for the lid to be detachable and allowing for the phone holder to also be customizable due to the screw-secure design that was utilized.
+Forces were applied to these preserves, and Fusion 360's cloud solvers generated hundreds of iterations, removing material from low-stress areas and reinforcing high-stress load paths. This resulted in an organic, lattice-like structure that a human engineer would be unlikely to design manually.
 
 ---
 
-## Fabrication and Materials
+## Discussion and Design Rationale
+
+### Industry Application: Powder Bed Fusion & Generative Design
+The pairing of Generative Design with Powder Bed Fusion (PBF) represents a paradigm shift in industries like aerospace and automotive. Traditional subtraction methods (CNC) cannot easily manufacture the hollow, organic shapes GD produces. PBF removes these constraints.
+
+A specific commercial example of this is the **General Motors seat bracket**. GM used generative design to consolidate a standard seat bracket assembly—originally 8 separate stamped steel parts—into a **single stainless steel component**. The result was 40% lighter and 20% stronger. This mirrors the goal of this project: reducing the truck assembly from a clamped system to a singular, efficient unit.
+
+### Load Cases and Constraints
+Applying proper load cases is the most critical step; the solver only reacts to forces explicitly defined. For this truck, three primary loads were applied:
+* **Vertical Load:** The weight of the rider distributed through the bushings.
+* **Dynamic Shock:** 3-4x the static load to account for road bumps.
+* **Torsional Load:** The torque generated by the 6374 brushless motor pulling on the belt, attempting to twist the mount.
+
+I constrained the pivot cup and kingpin hole as fixed anchor points. These constraints dictated the "roots" from which the material grew.
+
+### Material Comparison: Nylon 12 vs. AlSi10Mg
+The generative outcomes differed significantly based on material stiffness:
+* **Nylon 12 (SLS):** The nylon outcome was significantly bulkier. Because Nylon has a lower Young's Modulus, the algorithm generated thick, branch-like structures to resist deflection. While durable, Nylon serves as a thermal insulator, which is less ideal for a motor mount that needs to dissipate heat.
+* **AlSi10Mg (Aluminum):** The aluminum outcome was fine and lattice-like. The high stiffness of the metal allowed for thin struts to carry the same load. This is the superior choice for this application, as the aluminum hanger acts as a heatsink for the motor.
+
+### Critique of Generative Design
+While powerful, GD is not without drawbacks. The "organic" geometry is difficult to verify using standard measurements and nearly impossible to modify manually if the design requirements change later. Additionally, "finished" prints still require precision post-processing (machining) for bearing interfaces, meaning it is not truly a "click print" solution.
+
+---
+
+## Improvements and Iteration
+
+Upon receiving the final print and attempting assembly, several dimensional and geometric constraints were identified that need correction in "Version 2":
+
+### 1. Motor Mount Position (Belt Track)
+The most critical error was the placement of the motor preservation geometry. I placed the motor mount too far from the axle center.
+* **The Issue:** The supplied timing belt was too short to connect the motor pulley to the wheel pulley.
+* **The Fix:** In the next iteration, I need to adjust the "Obstacle Geometry" to force the motor mount 10-15mm closer to the hanger. This will allow the belt to fit with adequate slack for tensioning.
+
+### 2. Kingpin Hole Tolerance
+The central hole for the kingpin was modeled at exact nominal dimensions (9.5mm).
+* **The Issue:** Due to thermal shrinkage during the sintering process, the hole printed undersized, and the truck could not fit onto the baseplate kingpin without drilling.
+* **The Fix:** I must apply a +0.2mm to +0.3mm offset to the preservation geometry to account for manufacturing tolerance and shrinkage.
+
+### 3. Axle Rod Clearance
+Similarly, the through-hole for the main steel axle rod was too tight.
+* **The Issue:** The rod could not pass through the hanger body.
+* **The Fix:** The internal diameter of the axle support structure needs to be increased to create a "clearance fit" rather than an interference fit, allowing the rod to slide through freely.
+
+---
+
+## Fabrication
 
 ### Printing Technology
-Fused Filament Fabrication (FFF) was utilized for all structural components.
-
-* **Material Used:** PLA and TPU
-    * *Rationale:* PLA was selected for its high stiffness and ability to withstand pressure when screwed tightly, as well as not deforming when pressure is applied, and TPU for its flexibility and elasticity to act as the phone holder.
-* **Resolution & Density:** A 0.2mm layer height was selected to balance print velocity with geometric fidelity. All load-bearing parts were printed with 4 perimeter walls (shells) to maximize hoop strength around fasteners.
-
-### Components
-1. **The Clamp:** Fabricated with 20% infill density to withstand the compressive forces exerted by the mounting hardware. Holes are created to allow for heat sets and bolts to be attached for securement. PLA was used for stability and rigidity for the clamp component and bolts were used to ensure a secure hold.
-2. **The Phone Holder:** A flexible TPU printed phone holder that is customized to the user's phone by using phone case models to create personalized fits.
-3. **The Detent Component:** Standard metal ball bearings and compression springs were utilized to create a detent mechanism that is enclosed within the top clamp section. The detent spin component is a separate component that is attached to the phone holder but separate from the clamp to allow for rotation.
-
----
-
-## Assembly Instructions
-
-1.  Print all components (detent component, clamp top component, and clamp bottom component) in Fusion 360 file using PLA and the phone holder component in TPU.
-2.  Assemble parts by inserting 4 M5 heat sets into the top clamp component and 3 M3 heat sets into the indicated holes in the top clamp component for lid securing. In the middle of the detent component, insert an M3 heat set to secure the phone holder onto the detent component.
-3.  Insert 4 M5x25 bolt into the top clamp component bolt components, connect the bottom clamp component and attach bolts to the bottom of the bottom component, this should give clearance to attach onto a bike or scooter handle
-4.  Insert a 7mm (diameter) and 15mm (length) spring into the detent box compartment and a 7mm ball attached to it. Insert the detent component, compressing the ball and spring combination.
-5.  Align the lid over the detent component and align the holes to the top clamp component's M3 heat sets. Screw in 6mm long M3 screws or bolts.
-6.  Align the hole in the phone holder component to the M3 heatset at the top of the detent component. Screw in a 12mm M3 bolt or screw.
-7. The assembly is complete and to tighten or loosen the clamp to fit different sizes, secure or loosen the bolts attached to the bottom clamp component.
+* **Prototype:** Printed in Nylon 12 using Selective Laser Sintering (SLS) on a Formlabs Fuse 1.
+* **Final Production:** The final design is intended for AlSi10Mg using Direct Metal Laser Sintering (DMLS).
+* **Resolution:** 100-micron layer height for Nylon 12.
 
 ---
 
 ## CAD Model
 
-<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH90d2dQT28d5b60281178dea6df970e33cc" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+<iframe src="https://vanderbilt643.autodesk360.com/g/shares/YOUR_SHARE_LINK_HERE" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
 
 ---
 
-{% include gallery caption="Phone Holder Gallery" %}
+{% include gallery caption="Generative Design Iter
