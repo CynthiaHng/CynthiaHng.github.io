@@ -7,93 +7,70 @@ header:
 gallery:
   - image_path: /assets/img/truck_front.jpeg
   - image_path: /assets/img/truck_side.jpeg
-  - image_path: /assets/img/nylon_vs_aluminum.png
+  - image_path: /assets/img/load_cases_screenshot.png
   - image_path: /assets/img/stress_analysis.png
-  - image_path: /assets/img/preserves_obstacles.png
-  - image_path: /assets/img/printed_part_fit_check.jpeg
+  - image_path: /assets/img/printed_part_failure_analysis.jpeg
 ---
 
 ## Features
 
-- **Generative Design Workflow:** Modeled using Autodesk Fusion 360's Generative Design extension. Instead of modeling the shape directly, the design was grown based on functional requirements, "preserve" geometries (axles, pivot cups), and "obstacle" geometries (wheels, ground, deck).
-- **Part Consolidation:** Replaces a traditional multi-part assembly (hanger, clamping ring, motor mount bracket, and fasteners) with a single, monolithic component.
-- **Multi-Material Optimization:** Solved simultaneously for two distinct manufacturing materials: Nylon 12 (SLS) and AlSi10Mg (Direct Metal Laser Sintering), highlighting how material properties influence topological outcomes.
-- **Lightweighting:** Optimized to minimize mass while maintaining a safety factor against the static weight of the rider and the dynamic torsional torque of the electric motor.
+- **Generative Design Workflow:** Modeled using Autodesk Fusion 360's Generative Design extension. The geometry was "grown" based on functional requirements, connecting the "preserve" geometries (axle, pivot cup, motor mount) while avoiding "obstacle" geometries (wheels, deck).
+- **Part Consolidation:** Replaces a traditional multi-part assembly (hanger, clamping ring, motor mount bracket) with a single, monolithic component.
+- **Multi-Material Optimization:** Solved simultaneously for Nylon 12 (SLS) and AlSi10Mg (Direct Metal Laser Sintering).
+- **Shear & Static Loading:** Optimized to resist not just the weight of the rider, but the lateral shear forces experienced during hard turning and sliding.
 
 ---
 
-## Introduction and Generative Methodology
+## Introduction and Methodology
 
-This project focused on the application of Generative Design (GD) to address a gap in the Digital Fabrication Lab's transportation options. The objective was to build a custom electric longboard truck that integrates the motor mount directly into the hanger geometry. Unlike the "Top-Down" approach used in previous projects, this workflow utilized *computational synthesis*.
+This project focused on the application of Generative Design (GD) to create a custom electric longboard truck that integrates the motor mount directly into the hanger geometry. Unlike traditional "Top-Down" modeling where shapes are drawn explicitly, this workflow used an algorithmic approach to generate optimal material placement based on boundary conditions.
 
-The core engineering challenge was shifting from explicitly drawing geometry to defining the *problem definition*.
-
-### Leveraging the Generative Workspace
-
-The CAD process began by defining the "Preserve Geometry"—the critical interfaces that must remain (the axle housing, the pivot cup, and the kingpin bushing seat). "Obstacle Geometry" was then modeled to represent areas where material *cannot* go, such as the spinning wheels, the ground clearance zone, and the turning radius of the deck.
-
-Forces were applied to these preserves, and Fusion 360's cloud solvers generated hundreds of iterations, removing material from low-stress areas and reinforcing high-stress load paths. This resulted in an organic, lattice-like structure that a human engineer would be unlikely to design manually.
+The core engineering challenge was defining the *problem definition*—specifically, ensuring the preserves (interfaces) were accurate and the obstacles (clearances) prevented the software from placing material where the belt or wheels needed to spin.
 
 ---
 
 ## Discussion and Design Rationale
 
-### Industry Application: Powder Bed Fusion & Generative Design
-The pairing of Generative Design with Powder Bed Fusion (PBF) represents a paradigm shift in industries like aerospace and automotive. Traditional subtraction methods (CNC) cannot easily manufacture the hollow, organic shapes GD produces. PBF removes these constraints.
+### Industry Application: The Airbus "Bionic Partition"
+The pairing of Generative Design with Powder Bed Fusion (PBF) is revolutionizing the aerospace industry by removing the constraints of traditional tooling. A prime example (distinct from the automotive sector) is the **Airbus A320 Bionic Partition**.
 
-A specific commercial example of this is the **General Motors seat bracket**. GM used generative design to consolidate a standard seat bracket assembly—originally 8 separate stamped steel parts—into a **single stainless steel component**. The result was 40% lighter and 20% stronger. This mirrors the goal of this project: reducing the truck assembly from a clamped system to a singular, efficient unit.
+Created by Airbus and Autodesk, this partition separates the passenger cabin from the galley. Traditionally, this was a heavy, honeycomb composite wall. Using generative design, Airbus created a lattice structure that mimicked slime mold growth patterns to optimize load paths. The result was printed in **Scalmalloy (an aluminum-magnesium alloy)** using DMLS. This reduced the part weight by **45% (30kg per plane)**, directly reducing fuel consumption and CO2 emissions. This mirrors our project goal: utilizing high-stiffness alloys (AlSi10Mg) to reduce mass while maintaining structural integrity in a complex assembly.
 
 ### Load Cases and Constraints
-Applying proper load cases is the most critical step; the solver only reacts to forces explicitly defined. For this truck, three primary loads were applied:
-* **Vertical Load:** The weight of the rider distributed through the bushings.
-* **Dynamic Shock:** 3-4x the static load to account for road bumps.
-* **Torsional Load:** The torque generated by the 6374 brushless motor pulling on the belt, attempting to twist the mount.
-
-I constrained the pivot cup and kingpin hole as fixed anchor points. These constraints dictated the "roots" from which the material grew.
+Applying proper load cases is critical, as the solver only reacts to defined forces. Based on the design review, the model was updated to account for realistic riding conditions:
+* **Vertical Load (Rider Weight):** A force of **750 N** was applied to the axle preserves to simulate a standard rider (approx. 75kg).
+* **Lateral Shear (Turning):** A transverse force of **300 N** was applied laterally to the axles. This is crucial because standard trucks fail in shear during slides or sharp carves. Engineering materials often have lower shear strength than tensile strength, so neglecting this would result in a fragile print.
+* **Constraints:** The **Pivot Cup** and the **Kingpin Hole** were constrained as "Fixed" anchor points, dictating the roots from which the material grew.
 
 ### Material Comparison: Nylon 12 vs. AlSi10Mg
-The generative outcomes differed significantly based on material stiffness:
-* **Nylon 12 (SLS):** The nylon outcome was significantly bulkier. Because Nylon has a lower Young's Modulus, the algorithm generated thick, branch-like structures to resist deflection. While durable, Nylon serves as a thermal insulator, which is less ideal for a motor mount that needs to dissipate heat.
-* **AlSi10Mg (Aluminum):** The aluminum outcome was fine and lattice-like. The high stiffness of the metal allowed for thin struts to carry the same load. This is the superior choice for this application, as the aluminum hanger acts as a heatsink for the motor.
-
-### Critique of Generative Design
-While powerful, GD is not without drawbacks. The "organic" geometry is difficult to verify using standard measurements and nearly impossible to modify manually if the design requirements change later. Additionally, "finished" prints still require precision post-processing (machining) for bearing interfaces, meaning it is not truly a "click print" solution.
+* **Nylon 12 (SLS):** The nylon outcome resulted in a bulkier volume. Because Nylon has a lower Young's Modulus, the algorithm generated thicker branches to resist deflection. While Nylon is durable for impact, it acts as a thermal insulator, which is suboptimal for a motor mount.
+* **AlSi10Mg (Aluminum):** The aluminum outcome was significantly finer. The high stiffness allowed for thin, efficient struts. This is the superior choice for this application as the hanger acts as a heatsink for the motor.
 
 ---
 
-## Improvements and Iteration
+## Improvements and Critical Analysis
 
-Upon receiving the final print and attempting assembly, several dimensional and geometric constraints were identified that need correction in "Version 2":
+Upon post-processing the initial SLS print, several critical design failures were identified. These errors highlight the difference between a "successful solve" in CAD and a functional part in reality.
 
-### 1. Motor Mount Position (Belt Track)
-The most critical error was the placement of the motor preservation geometry. I placed the motor mount too far from the axle center.
-* **The Issue:** The supplied timing belt was too short to connect the motor pulley to the wheel pulley.
-* **The Fix:** In the next iteration, I need to adjust the "Obstacle Geometry" to force the motor mount 10-15mm closer to the hanger. This will allow the belt to fit with adequate slack for tensioning.
+### 1. Belt Tension & Motor Distance
+The most significant error was the positioning of the motor mount preserve.
+* **The Failure:** The motor mount was placed ~105mm from the axle center. The required distance for the supplied belt was **~73mm**. This made the belt impossible to install.
+* **The Correction:** In the revised CAD model, the "Obstacle Geometry" for the motor was shifted closer to the hanger to match the 73mm center-to-center specification.
 
-### 2. Kingpin Hole Tolerance
-The central hole for the kingpin was modeled at exact nominal dimensions (9.5mm).
-* **The Issue:** Due to thermal shrinkage during the sintering process, the hole printed undersized, and the truck could not fit onto the baseplate kingpin without drilling.
-* **The Fix:** I must apply a +0.2mm to +0.3mm offset to the preservation geometry to account for manufacturing tolerance and shrinkage.
+### 2. Tolerance & Fitment
+* **The Failure:** The Kingpin hole and Axle pass-through were modeled at exact nominal dimensions (9.5mm and 8mm respectively). Due to thermal shrinkage in the SLS process, these holes printed undersized.
+* **The Correction:** For future prints, a tolerance offset of **+0.3mm** must be applied to all internal diameters in the "Preserve Geometry" phase.
 
-### 3. Axle Rod Clearance
-Similarly, the through-hole for the main steel axle rod was too tight.
-* **The Issue:** The rod could not pass through the hanger body.
-* **The Fix:** The internal diameter of the axle support structure needs to be increased to create a "clearance fit" rather than an interference fit, allowing the rod to slide through freely.
-
----
-
-## Fabrication
-
-### Printing Technology
-* **Prototype:** Printed in Nylon 12 using Selective Laser Sintering (SLS) on a Formlabs Fuse 1.
-* **Final Production:** The final design is intended for AlSi10Mg using Direct Metal Laser Sintering (DMLS).
-* **Resolution:** 100-micron layer height for Nylon 12.
+### 3. Constraint Logic
+* **The Failure:** Initially, only the pivot cup was constrained. This allowed the software to potentially "float" the kingpin area, resulting in weak geometry around the bushing seat.
+* **The Correction:** The load case was updated to strictly constrain both the pivot cup and the kingpin interface to ensure a rigid connection to the baseplate.
 
 ---
 
 ## CAD Model
 
-<iframe src="https://vanderbilt643.autodesk360.com/g/shares/SH90d2dQT28d5b602811ef32a6b664959981" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
+<iframe src="YOUR_FUSION_LINK_HERE" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>
 
 ---
-{% include gallery caption="Truck SLS Gallery" %}
+
+{% include gallery caption="Truck SLS Generative Design" %}
