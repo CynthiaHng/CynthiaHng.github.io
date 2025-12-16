@@ -1,4 +1,4 @@
-  ---
+---
 title: "Generative Design Skateboard Truck & Motor Mount"
 excerpt: "A lightweight, consolidated electric skateboard truck hanger created using Generative Design in Fusion 360, optimized for Nylon 12 and AlSi10Mg Powder Bed Fusion."
 header:
